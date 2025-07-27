@@ -1,6 +1,7 @@
 {
-	"task": "Fetch information on the supplied list of 400 jazz standards from the The Real Book Volume 6 corresponding to the output_columns specified below. Output a json file containing this information following the format specified below.",
-	"book": "The Real Book Volume 6",
+	"task": "Fetch information on the supplied list of 400 jazz standards from the The Real Book Volume I Sixth Edition corresponding to the output_columns specified below. Output a json file containing this information following the format specified below.",
+	"book": "The Real Book Volume I Sixth Edition",
+	"publisher": "Hal Leonard",
 	"song_list": [
 		"African Flower (Petite Fleur Africaine)",
 		"Afro Blue",
@@ -401,7 +402,7 @@
 		"You Don't Know What Love Is",
 		"You Took Advantage Of Me",
 		"You're Nobody 'til Somebody Loves You",
-		"Young At Heart",
+		"Young At Heart"
 	],
 	"useful_websites": [
 		"https://www.jazzstandards.com",
@@ -410,7 +411,7 @@
 		"https://www.learnjazzstandards.com/jazz-standards-list",
 		"https://www.halleonard.com/series/REALBK",
 		"https://musescore.com/official_scores",
-		"https://en.wikipedia.org",
+		"https://en.wikipedia.org"
 	],
 	"output": "json file with the output_columns specified below",
 	"file_extension": "json",
@@ -425,6 +426,6 @@
 		"Form",
 		"Tonality",
 		"Movement",
-		"Difficulty",
+		"Difficulty"
 	]
 }
