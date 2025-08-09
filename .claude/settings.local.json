@@ -19,7 +19,8 @@
       "Bash(./target/release/jazz-db:*)",
       "Bash(chmod:*)",
       "Bash(make:*)",
-      "Bash(./install.sh)"
+      "Bash(./install.sh)",
+      "Bash(just info)"
     ],
     "deny": []
   }

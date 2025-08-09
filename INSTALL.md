@@ -78,7 +78,7 @@ git clone https://github.com/user/jazz-db.git
 cd jazz-db
 
 # Build and install
-make install
+just install
 
 # Or manually with cargo
 cargo build --release
@@ -120,7 +120,7 @@ If installation fails with permission errors:
 
 ```bash
 # Ensure you have write access or use sudo
-sudo make install
+sudo just install
 
 # Or install to user directory
 cargo install --path . --root ~/.local
@@ -136,6 +136,10 @@ The binary is self-contained and requires no runtime dependencies. If you're bui
 
 ### Remove binary:
 ```bash
+# Using justfile
+just uninstall
+
+# Or manually
 sudo rm /usr/local/bin/jazz-db
 ```
 
