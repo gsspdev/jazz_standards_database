@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(cargo check:*)",
+      "Bash(cargo test:*)",
+      "Bash(cargo run:*)",
+      "Bash(python3:*)",
+      "Bash(grep:*)",
+      "Bash(cargo:*)",
+      "Bash(mv:*)",
+      "Bash(./target/release/jazz_standards_database:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(/tmp/test_standalone/jazz_standards_database stats)",
+      "Bash(rm:*)",
+      "Bash(./target/debug/jazz-db:*)",
+      "Bash(./target/release/jazz-db:*)",
+      "Bash(chmod:*)",
+      "Bash(make:*)",
+      "Bash(./install.sh)"
+    ],
+    "deny": []
+  }
+}
