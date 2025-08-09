@@ -1,9 +1,3 @@
-//! Jazz Standards Database Library
-//! 
-//! This library provides data structures and functionality for working with
-//! a comprehensive database of jazz standards including chord progressions,
-//! metadata, and search capabilities.
-
 pub mod models;
 pub mod database;
 pub mod search;
