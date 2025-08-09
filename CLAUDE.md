@@ -18,6 +18,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `cargo run` - Execute the main Rust application
 - `cargo test` - Run tests (currently no tests defined)
 
+### Justfile Commands
+- `just build` - Build debug version
+- `just build-release` - Build optimized release version
+- `just install` - Install to system (requires sudo)
+- `just clean` - Clean build artifacts
+- `just info` - Show binary information and database stats
+
 ## Project Architecture
 
 ### Core Purpose
@@ -63,14 +70,30 @@ The actual JSON data follows a slightly different structure with PascalCase nami
   - **Endings**: Alternative endings for sections
 
 ### Directory Structure
-- `src/main.rs` - Rust data structures and application entry point
-- `JazzStandards.json` - Main consolidated database
-- `JazzStandards/` - Individual song JSON files (e.g., "26-2.json", "All Blues.json")
+- `src/` - Rust source code organized into modules
+  - `main.rs` - Application entry point and command handlers
+  - `lib.rs` - Library module exports and documentation
+  - `models.rs` - Data structures (Song, Section, Segment)
+  - `database.rs` - Database loading with embedded JSON
+  - `search.rs` - Search and filtering functionality
+  - `display.rs` - Output formatting and display functions
+  - `stats.rs` - Statistical analysis functions
+  - `cli.rs` - Command-line interface definitions
+- `JazzStandards.json` - Main consolidated database (embedded at compile time)
+- `JazzStandards/` - Individual song JSON files
+
+### Code Architecture
+- **Modular Design**: Code is organized into logical modules for maintainability
+- **Library Structure**: Core functionality is in a library crate, binary uses it
+- **Embedded Database**: JSON data is compiled into the binary using `include_str!`
+- **CLI Framework**: Uses clap for robust command-line argument parsing
+- **Self-Contained**: No external file dependencies at runtime
 
 ### Data Storage Architecture
+- **Embedded Data**: Database is included in binary at compile time (no file I/O)
 - **Individual Files**: Each song has its own JSON file in `JazzStandards/` directory
 - **Consolidated Database**: `JazzStandards.json` contains all songs in a single array
 - **Chord Notation**: Chords are stored as pipe-separated strings (e.g., "Fmaj7,Ab7|Dbmaj7,E7")
 
 ### Current Implementation Status
-The Rust application currently only defines data structures but doesn't implement functionality to read or process the JSON files. The main function is empty except for the struct definitions.
+The application is fully functional with comprehensive CLI interface, search capabilities, statistical analysis, and detailed song display with chord progressions. The code is well-modularized and documented.

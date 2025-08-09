@@ -20,7 +20,8 @@
       "Bash(chmod:*)",
       "Bash(make:*)",
       "Bash(./install.sh)",
-      "Bash(just info)"
+      "Bash(just info)",
+      "Bash(just build-release:*)"
     ],
     "deny": []
   }
