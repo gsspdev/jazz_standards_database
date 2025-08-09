@@ -2,3 +2,8 @@ jazz_standards_backup*
 jazz_scraper_cache.json
 jazz_scraper.log
 .DS_Store
+
+
+# Added by cargo
+
+/target
